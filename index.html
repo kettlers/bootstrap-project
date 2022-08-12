@@ -10,63 +10,280 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 
     <title>Pablo Picasso</title>
 
 </head>
 
 <body>
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a class="navbar-brand px-2" href="/"
-                    class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <img src="img/picasso-logo.png" alt="logo" />
-                </a>
+    <main class="flex-shrink-0">
+        <!--viewport size-->
+        <div class="alert alert-dark" role="alert">
+            This viewport size is currently: <span id="viewport-size"></span> <span id="breakpointName"></span>
+        </div>
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
+        <!--navbar-->
+        <header class="navbar p-2 bg-dark">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap flex-grow-1 align-items-center justify-content-between">
+                    <a class="navbar-brand px-2 mx-auto" href="/"
+                        class="d-flex align-items-start mb-2 mb-lg-0 text-white text-decoration-none">
+                        <img src="img/picasso-logo.png" alt="logo" />
+                    </a>
 
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
-                        aria-label="Search">
-                </form>
+                    <ul class="nav col-12 col-lg-auto mb-2 flex-grow-1 justify-content-around mb-md-0">
+                        <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Services</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
 
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                        <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+
+                    <div class="text-end mx-auto">
+                        <button type="button" class="btn btn-outline-light me-2">Login</button>
+                        <button type="button" class="btn btn-warning">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!--hero-->
+        <div id="hero" class="container-fluid col-xxl-8 px-4 py-5 d-flex justify-content-end align-items-end">
+            <div class="row g-5 py-5">
+                <div class="col-lg-6">
+                    <div class="typewriter">
+                        <h1 class="display-5 fw-bold lh-1 mb-3 text-bg-dark">I am Pablo Picasso.</h1>
+                    </div>
+                    <p class="lead text-bg-dark">Spanish painter, sculptor, printmaker, ceramicist and theatre designer
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
+                        <button type="button" class="btn btn-secondary btn-lg px-4">Default</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
 
-    <div id="hero" class="container-fluid col-xxl-8 px-4 py-5 d-flex justify-content-end align-items-end">
-        <div class="row g-5 py-5">
-            <div class="col-lg-6">
-                <div class="typewriter">
-                    <h1 class="display-5 fw-bold lh-1 mb-3 text-bg-dark">I am Pablo Picasso.</h1>
+        <div class="divider"></div>
+
+        <!--quotes-->
+        <div class="container px-4 py-5">
+            <div class="row featurette">
+                <div class="col-md-7 text-center my-auto">
+                    <blockquote class="blockquote">
+                        <h2 class="featurette-heading fw-normal lh-1">Others have seen what is and asked why.</h2>
+                        <h2 class="featurette-heading fw-normal lh-1"><span class="text-muted">I have seen what could be
+                                and asked why not.</span></h2>
+                        <footer class="blockquote-footer mt-3">Pablo Picasso</footer>
+                    </blockquote>
                 </div>
-                <p class="lead text-bg-dark">Spanish painter, sculptor, printmaker, ceramicist and theatre designer</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                    <button type="button" class="btn btn-secondary btn-lg px-4">Default</button>
+                <div class="col-md-5 d-flex justify-content-center p-5" id="blob-bg">
+                    <img src="img/pablo-picasso-small.jpeg" class="featurette-image rounded-circle" width="200"
+                        height="200" />
                 </div>
             </div>
         </div>
-    </div>
+        <div class="divider"></div>
+        <!--services-->
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">Services</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div class="feature col">
+                    <div class="feature-icon mb-3 text-center">
+                        <i class="fa-solid fa-palette fa-5x"></i>
+                    </div>
+                    <h3>Painting</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum egestas ac ex ac commodo. Sed
+                        finibus egestas aliquet. Sed non lectus cursus, tempus arcu sed, pulvinar nunc.</p>
+
+                </div>
+                <div class="feature col">
+                    <div class="feature-icon mb-3 text-center">
+                        <i class="fa-solid fa-masks-theater fa-5x"></i>
+                    </div>
+                    <h3>Theater Design</h3>
+                    <p>Suspendisse et ex ex. Nunc lobortis augue nec ante ullamcorper aliquam. Pellentesque non orci
+                        erat.
+                        Aenean luctus lacus sed tristique laoreet. Phasellus vitae dolor metus.</p>
+
+                </div>
+                <div class="feature col">
+                    <div class="feature-icon mb-3 text-center">
+                        <i class="fa-solid fa-crow fa-5x"></i>
+                    </div>
+                    <h3>Sculpture</h3>
+                    <p>Duis eu auctor urna. Nunc facilisis, nisl a euismod mollis, massa diam dictum mauris, vel aliquam
+                        mauris nisi eu urna. Vivamus vel tellus ac libero congue ornare sit amet ut urna.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <!--album-->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h2 class="pb-2 border-bottom">Featured Work</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/buste-de-femme.png" class="bd-placeholder-img card-img-top" width="100%"
+                                height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/femme-assise-pres.jpg" class="bd-placeholder-img card-img-top" width="100%"
+                                height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/femme-assise.jpg" class="bd-placeholder-img card-img-top" width="100%"
+                                height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/fillette-a-la-corbeille-fleurie.png" class="bd-placeholder-img card-img-top"
+                                width="100%" height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/garcon-a-la-pipe.png" class="bd-placeholder-img card-img-top" width="100%"
+                                height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="img/la-gommeuse.jpeg" class="bd-placeholder-img card-img-top" width="100%"
+                                height="225" />
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="container px-4 py-5">
+            <h2 class="pb-2 border-bottom">References</h2>
+            <ul>
+                <li>https://getbootstrap.com/docs/5.2/examples/</li>
+                <li>https://css-tricks.com/snippets/css/typewriter-effect/</li>
+                <li>https://redstapler.co/curved-custom-shape-div-css-svg/</li>
+            </ul>
+        </div>
 
 
-
+    </main>
+    <!--footer-->
+    <footer class="footer mt-auto py-3 bg-light">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+        </ul>
+        <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/112de77e17.js" crossorigin="anonymous"></script>
+    <script src="js/viewport.js"></script>
+
 </body>
 
 </html>
